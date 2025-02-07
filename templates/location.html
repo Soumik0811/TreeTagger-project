@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TreeTaggerPlus</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='location.css') }}">
+    <script src="{{ url_for('static', filename='location.js') }}"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Montserrat:wght@700&family=Raleway:wght@400&display=swap"
+    />
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7mrFisKp_ipRDuhCh6IpiC_WYlbZKKvQ&callback=initMap"
+      async
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Upload section -->
+        <div
+          class="col-md-3 col-12 d-flex justify-content-center align-items-start mt-4"
+        >
+
+        <div class="location-card">
+          <h3 class="text-center">Upload Files</h3>
+          <div class="upload-box">
+            <div class="file-upload">
+              <label class="file-label" for="imageInput">
+                  <!-- Leaf Icon (using Material Icons) -->
+                  <i class="material-icons" style="font-size: 50px; color: #28a745;">eco</i>
+                  <input
+                      type="file"
+                      id="imageInput"
+                      class="form-control-file"
+                      accept="image/*"
+                      multiple
+                      style="display: none;"
+                  />
+              </label>
+              <p class="file-limit">Maximum file size 50 MB</p>
+          </div>
+          
+              <div class="file-list mt-3">
+                  <!--Example of uploaded files with progress bar-->
+                  <div class="file-item">
+                      <div class="file-info">
+                          <span>Image Uploading...</span>
+                          <div class="progress">
+                              <div
+                                  class="progress-bar"
+                                  role="progressbar"
+                                  style="width: 0%;"
+                                  aria-valuenow="0"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                              ></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          <button
+              type="button"
+              class="btn btn-primary btn-block mt-4"
+              onclick="uploadAndDetectPlant()"
+          >
+              Upload & Detect Plant
+          </button>
+          <button
+              type="button"
+              id="tagButton"
+              class="btn btn-success btn-block mt-3"
+              onclick="tagTree()"
+    >
+              Ready to Tag this Tree?
+          </button>
+            <!-- Loader to show while tagging -->
+            <div id="tagLoader" class="text-center mt-3" style="display:none;">
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Tagging...</span>
+              </div>
+              <p>Tagging Tree, please wait...</p>
+            </div>
+            <!-- Weather and soil details -->
+            <div class="details-container mt-2">
+              <div id="weather" class="weather-card mb-2"></div>
+              <div id="soil" class="soil-card"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map section -->
+        <div class="col-md-9 col-12">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

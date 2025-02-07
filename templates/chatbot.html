@@ -1,0 +1,19 @@
+<!-- Chatbot Component: chatbot.html -->
+<div id="chatbot-container">
+    <div id="chatbot-icon" onclick="toggleChatbot()">
+        <i class="fas fa-comments"></i>
+    </div>
+    <div id="chatbot-window">
+        <div id="chat-header">
+            <h4>Chatbot</h4>
+            <span onclick="toggleChatbot()">&#10005;</span>
+        </div>
+        <div id="chat-body">
+            <div id="chat-messages"></div>
+        </div>
+        <div id="chat-footer">
+            <input type="text" id="userInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)" />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>

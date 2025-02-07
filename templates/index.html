@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Tagger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Include Font Awesome -->
+
+</head>
+<body>
+    <section class="header">
+        <!-- <nav>
+            <div class = "nav-links">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li>
+                        {% if username != 'Guest' %}
+                            <a href="/logout">Logout ({{ username }})</a>
+                        {% else %}
+                            <a href="/login">Login</a>
+                        {% endif %}
+                    </li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav> -->
+        <div class="text-box">
+            <h1>GROWTH</h1>
+            <p>Empowering a Greener Future: Harnessing the Power of Technology to Classify Trees, Analyze Environments, and Guide Sustainable Afforestation for Thriving Ecosystems</p>
+            <a href=""class="hero-btn">Join us</a>
+        </div> 
+    </section>
+    
+    <section class="plants-section">
+        <div class="plant-container">
+            <div class="plant-content">
+                <div class="text-content">
+                    <h1>Plants<br>For the People</h1>
+                    <p>We want our visitors to get inspired to get their hands dirty</p>
+                </div>
+                <div class="image-content">
+                    <img src="static/images/plant.jpeg" alt="Plants">
+                </div>
+            </div>
+    
+            <div class="plant-content">
+                <div class="text-content">
+                    <h2>Tag, Grow <span>Sustain, Thrive</span></h2>
+                    <p>By leveraging advanced image classification and geolocation technologies, <strong>growth</strong> can accurately identify tree species and understand the specific environmental conditions of an area, including climate and soil type.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section class="eco-toolkit">
+        <h1>EcoTool kit</h1>
+        <p>Explore our powerful features like Map Explorer, Leaf Analyzer, and <span>Growth</span> Community to make informed decisions and contribute to a greener future.</p>
+        <div class="toolkit-cards">
+            <div class="card map-explorer">
+                
+                <div class="card-content">
+                    <h2>Map Explorer</h2>
+                    <p>Discover the best tree species for your region with our interactive map. Search by location to view climate data and soil types, and find out which plants will thrive in specific areas. Perfect for planning your next afforestation project.</p>
+                    <a href="{{ url_for('home') }}" class="card-btn">&#8594;</a>
+                </div>
+               
+            </div>
+            <div class="card leaf-analyzer">
+                <div class="card-content">
+                    <h2>Leaf Analyzer</h2>
+                    <p>Upload a leaf image to instantly classify the tree species using our advanced AI-powered model. Get detailed information on the tree type, along with geolocation-based insights into the climate and soil conditions of the area.</p>
+                    <a href="tree.html" class="card-btn">&#8594;</a>
+                </div>
+            </div>
+            <div class="card growth-community">
+                <div class="card-content">
+                    <h2><span>Gr</span>Community</h2>
+                    <p>Connect with a network of like-minded individuals dedicated to reforestation and sustainable planting. Share your findings, explore resources, and contribute to afforestation projects with guidance from our expert recommendations.</p>
+                    <a href="https://example.com/map-explorer" class="card-btn">&#8594;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="community-section">
+        <div class="background-overlay">
+            <div class="content">
+                <h1>Join The Community</h1>
+                <p>Become a part of our mission to restore and preserve our planet’s forests. TreeTagger empowers communities by combining cutting-edge technology with hands-on environmental action. Whether you are an eco-enthusiast, a volunteer, or a researcher, our platform offers a way for you to contribute to global reforestation efforts. Join us in making a difference, one tree at a time.</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="#" class="social-btn"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="social-btn"><i class="fab fa-pinterest"></i> Pinterest</a>
+                </div>
+            </div>
+        </div>
+    </section>  
+</body>
+</html> 
+{% endblock %}

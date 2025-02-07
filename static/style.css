@@ -1,0 +1,606 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5e5;
+}
+
+.header {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Apply blur effect */
+    z-index: -2; /* Place behind the content */
+}
+
+/* .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+} */
+
+/* nav {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.7); 
+    position: relative; 
+    z-index: 1; 
+}
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    background: #4CBB17;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    height: 2px;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+} */
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1; /* Ensure text is above the overlay and background */
+}
+
+.text-box h1 {
+    font-size: 200px;
+    margin: 0;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add text shadow for better readability */
+}
+
+.hero-btn {
+    display: inline-block; 
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 20px;
+    background-color: #4CBB17;
+    border-radius: 10px; 
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.hero-btn:hover {
+    background-color: #3b9b14; /* Darker shade of green */
+    border-color: #3b9b14; /* Change border color */
+    color: #f0f0f0; /* Lighter text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.plants-section, .eco-toolkit {
+    background-color: #f5f5e5; /* Consistent background color */
+    padding: 20px;
+}
+
+/* Section styling */
+.plants-section {
+    background-color: #f5f5e5;
+    padding: 60px 20px; /* Add padding for spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack content vertically on small screens */
+}
+
+/* Container for plant content */
+.plant-container {
+    width: 100%; /* Full width to use available space */
+    max-width: 1200px; /* Limit the width for large screens */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row; /* Arrange items in a row */
+    gap: 20px; /* Space between plant-content divs */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center the plant contents */
+}
+
+/* General styling for plant content */
+.plant-content {
+    display: flex;
+    flex-direction: row; /* Arrange children in a row */
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+    flex: 1; /* Allow content to grow and fill available space */
+    min-width: 300px; /* Ensure a minimum width for each card */
+    max-width: 600px; /* Limit maximum width for larger screens */
+}
+
+/* Styling for text content */
+.text-content {
+    width: 100%; /* Full width to use available space */
+    padding: 20px;
+    text-align: left;
+}
+
+.text-content h1,
+.text-content h2 {
+    font-size: 24px; /* Adjusted font size for better readability */
+    color: #4CBB17; /* A shade of green to match the nature theme */
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 16px; /* Adjusted font size */
+    color: #555;
+    line-height: 1.6;
+}
+
+.text-content span {
+    color: #4CBB17;
+    font-weight: bold;
+}
+
+/* Styling for image content */
+.image-content {
+    width: 40%; /* Adjust width to fit content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.plant-content:hover {
+    transform: scale(1.05); /* Slightly scale up the content on hover */
+}
+
+/* Responsive media query for smaller screens */
+@media (max-width: 768px) {
+    .plants-section {
+        padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .plant-container {
+        flex-direction: column; /* Stack plant contents vertically */
+        gap: 10px; /* Reduce gap between stacked plant contents */
+    }
+
+    .plant-content {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: stretch; /* Ensure full width on smaller screens */
+    }
+
+    .image-content {
+        width: 100%; /* Full width for images in smaller screens */
+    }
+}
+
+.eco-toolkit h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
+/* Eco Toolkit Section */
+.eco-toolkit {
+    padding: 50px 0;
+    background-color: #f5f5e5;
+    text-align: center;
+}
+
+.eco-toolkit h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.eco-toolkit p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #555;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.eco-toolkit span {
+    color: #6bbf59;
+    font-weight: bold;
+}
+
+.toolkit-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%;
+    position: relative;
+    transition: transform 0.3s ease;
+    min-height: 400px; /* Adjust height as needed */
+    color: white; /* Ensure text is readable on the background */
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;  /* Center content vertically */
+    align-items: center; 
+    
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1; /* Ensure it's behind the text */
+}
+
+.card-content {
+    position: relative;
+    z-index: 2; /* Ensure the content is above the overlay */
+    padding: 20px;
+    color: white;
+    text-align: left;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+.card .card-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent button background */
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 2; /* Ensure the button is above the overlay */
+    transition: background-color 0.3s ease;
+}
+
+.card .card-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+}
+
+.card:hover::before {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay on hover */
+    transform: scale(1.05); /* Slightly enlarge the card */
+}
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card p {
+    font-size: 16px;
+    color: #eee;
+    margin-bottom: 20px;
+}
+
+.card .card-btn {
+    font-size: 24px;
+    color: #fff;
+    text-align: right;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    
+}
+
+.card .card-btn:hover {
+    color: #6bbf59;
+    cursor: pointer;
+}
+
+/* Specific Card Backgrounds */
+.map-explorer {
+    background-image: url('images/india.png');
+    
+    
+}
+
+.leaf-analyzer {
+    background-image: url('images/leaf.jpeg');
+}
+
+.growth-community {
+    background-image: url('images/community.jpg');
+}
+
+.community-section {
+    position: relative;
+    background-image: url('images/last.jpeg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+}
+
+.background-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+    padding: 60px 20px;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Stacks the elements vertically */
+    align-items: center;
+    gap: 20px; /* Space between each element */
+}
+
+.content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row; /* Makes social links stack vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Space between buttons */
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 200px; /* Fixed width for consistency */
+}
+
+.social-btn i {
+    margin-right: 8px;
+}
+
+.social-btn:hover {
+    background-color: #e1e1e1;
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .social-btn {
+        width: 150px; /* Adjust width for smaller screens */
+        font-size: 14px;
+    }
+}
+
+/* Style for the TreeTagger class */
+.Tree-Tagger {
+    font-size: 2.5em;           /* Adjust the font size as needed */
+    font-weight: bold;          /* Make the text bold */
+    color: white;             /* Set a text color (dark blue-gray in this case) */
+    text-align: left;         /* Center align the text */
+    margin: 0;                  /* Remove default margin */
+    padding: 10px;              /* Add padding inside the heading */
+    background-color:  #4CAF50;  /* Set a background color (light gray in this case) */
+    border-radius: 8px;         /* Round the corners of the background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    position: fixed;            /* Fix the element to the screen */
+    top: 0;                     /* Align it to the top of the screen */
+    left: 0;                    /* Align it to the left of the screen */
+    width: 100%;                /* Make it span the full width of the screen */
+    z-index: 1000;              /* Ensure it stays on top of other elements */
+}
+
+/* TreeTagger heading styles */
+.Tree-Tagger {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+    background-color: #4CAF50; /* Dark background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Location container styles */
+.location-container {
+    margin: 80px auto; /* Space for the fixed header */
+    padding: 20px;
+    max-width: 1200px; /* Wider container */
+    /* White background for the container */
+    
+}
+/* Main content grid */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns: 1 part for location, 2 parts for details */
+    gap: 20px; /* Space between columns */
+}
+
+/* Location card styles */
+.location-card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.location-card h3 {
+    color: #2c3e50; /* Dark text color */
+    border-bottom: 2px solid #27ae60; /* Green underline */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.location-card input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 22px); /* Full width minus padding */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.location-card .search-btn, .location-card .location-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+    display: block; /* Make buttons stack vertically */
+    width: 100%; /* Full width */
+}
+
+.location-card .search-btn {
+    background-color: #3498db; /* Blue button */
+}
+
+.location-card .location-btn {
+    background-color: #27ae60; /* Green button */
+}
+
+.location-card .search-btn:hover, .location-card .location-btn:hover {
+    opacity: 0.9; /* Hover effect */
+}
+
+/* Details container styles */
+.details-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px; /* Space between cards */
+}
+
+/* Weather and Soil card styles */
+.weather-card, .soil-card {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.weather-card h3, .soil-card h3 {
+    color: #2c3e50; /* Dark text color */
+    border-bottom: 2px solid #27ae60; /* Green underline */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.weather-card p, .soil-card p {
+    margin: 5px 0;
+}
+
+.weather-card .value, .soil-card .value {
+    font-weight: bold;
+    color: #e74c3c; /* Red color for values */
+}
+
+.location-card .location-btn {
+    background-color: #27ae60; /* Green button */
+}
+
+.location-card .search-btn:hover, .location-card .location-btn:hover {
+    opacity: 0.9; /* Hover effect */
+}
