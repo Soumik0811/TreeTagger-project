@@ -11,7 +11,7 @@ from supabase import supabase
 from flask import redirect, url_for
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'user=postgres.lhcpvlzksihcncnuoelx password=[LONdonwnpl.123] host=aws-0-ap-southeast-1.pooler.supabase.com port=6543 dbname=postgres'
+app.config['SECRET_KEY'] = 'Your secret key'
 
 
 def to_celsius(temp):
@@ -29,7 +29,6 @@ def signup():
     if request.method == 'POST':
         email = request.form['email']
         username = request.form['username']
-        # password = generate_password_hash(request.form["password"], method='pbkdf2:sha256')
         password = request.form['password']
         data = supabase.table('users').insert({"email": email,"password": password,"username":username}).execute()
         return render_template('login.html')
@@ -76,8 +75,8 @@ def home():
        return render_template('location.html')
 
 def detect_plant_species(image_path):
-    API_KEY = "2b10RSLcE9pkrx6tO0XLXGfJu"  # Set your API_KEY here
-    PROJECT = "k-indian-subcontinent"  # try "weurope" or "canada"
+    API_KEY = "api key"  
+    PROJECT = "k-indian-subcontinent"  
     api_endpoint = f"https://my-api.plantnet.org/v2/identify/{PROJECT}?api-key={API_KEY}"
 
     # Open the image file
@@ -135,7 +134,7 @@ def detect_plant_species_route():
     # Fetch real-time weather and soil data
     try:
         # Weather API
-        api_key = '23255f30b925f3c16617f1ffdae6b51d'
+        api_key = 'weather api key'
         weather_api_url = 'https://api.openweathermap.org/data/2.5/weather'
         weather_response = requests.get(f'{weather_api_url}?lat={latitude}&lon={longitude}&appid={api_key}&units=metric')
 
