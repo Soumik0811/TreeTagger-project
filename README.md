@@ -91,20 +91,6 @@ By default, the app runs on `http://127.0.0.1:5000/`.
 - Upload a leaf image to classify tree species.
 - Explore the interactive tree map and get conservation news updates.
 
----
-
-## Future Enhancements
-- Add support for more tree species in the ML model.
-- Enhance chatbot capabilities with tree care insights.
-- Improve the UI/UX with interactive features.
-
----
-
-## Contributing
-1. Fork the repository.
-2. Create a new branch (`feature-branch`).
-3. Commit your changes and push to GitHub.
-4. Open a Pull Request.
 
 ##UI images:
 ![image](https://github.com/user-attachments/assets/8e13a4d9-7f44-496f-8306-2c91a3f4bba9)
